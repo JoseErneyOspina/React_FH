@@ -2,10 +2,9 @@
 
 const personajes = ['Goku','Vegeta','Trunks'];
 const [ , , p3 ] = personajes;
-console.log( p3 );
 
 
-const retornaArreglo = () =>{
+export const retornaArreglo = () =>{
     return ['ABC', 123];
 }
 
@@ -21,9 +20,6 @@ const usState = ( valor ) => {
 }
 
 const [ nombre, setNombre ] = usState( 'Goku' );
-
-console.log( nombre );
-setNombre();
 
 
 
