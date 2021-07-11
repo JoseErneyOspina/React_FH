@@ -6,7 +6,7 @@ export const getHeroeByIdAsync = ( id ) => {
 
         setTimeout( () =>  {
             // Tarea
-            // importen el 
+            // importen el
             const p1 = getHeroeById( id );
             if ( p1 ) {
                 resolve( p1 );
