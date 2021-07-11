@@ -1,24 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import GifGridItem from './GifGridItem';
 import getGifs from '../helpers/getGifs';
+import useFetchGifs from '../hooks/useFetchGifs';
 
 const GifGrid = ( { category } ) => {
 
-    const [images, setImages] = useState([]);
+    // const [images, setImages] = useState([]);
 
-    useEffect( () => {
-        getGifs( category )
-        // Esto retorna una promesa
-            .then( imgs => setImages( imgs ) )
-            // Podemos usar lo siguiente
-            // Ya que tenemos una función que su primer argumento es mandado a la función que esta adentro
-            .then( setImages );
-    }, [])
+    // Desestructuramos data que viene del custom hook
+    const { loading} = useFetchGifs();
+
+    // useEffect( () => {
+    //     getGifs( category )
+    //     // Esto retorna una promesa
+    //         // .then( imgs => setImages( imgs ) )
+    //         // Podemos usar lo siguiente
+    //         // Ya que tenemos una función que su primer argumento es mandado a la función que esta adentro
+    //         .then( setImages );
+    // }, [ category ]);
 
 
     return (
         <>
             <h3> { category } </h3>
+
+            {/* Usamos el  operador ternario para poner un condicional*/}
+            { loading ? 'cargando...' : 'Data cargada' }
+
             <div className ='card-grid'>
                 {/* <ol>
                     {
