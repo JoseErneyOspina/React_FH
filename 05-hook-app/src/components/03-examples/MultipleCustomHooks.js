@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import '../02-useEffect/effects.css';
 import { useCounter } from './../../hooks/useCounter';
