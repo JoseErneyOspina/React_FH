@@ -2,6 +2,9 @@
 @import './_resets.scss';
 
 // Component
-@import './styles__components/_buttons.scss';
-@import './styles__components/_links.scss';
-@import './styles__components/_auth.scss';
+@import 'components/_buttons.scss';
+@import 'components/_links.scss';
+@import 'components/_auth.scss';
+@import 'components/_journal.scss';
+@import 'components/_NothingSelected.scss';
+@import 'components/_notes.scss';
