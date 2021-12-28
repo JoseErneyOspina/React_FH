@@ -1,5 +1,6 @@
 import { types } from "../types/types";
 
+// action thunk
 export const startLoginEmailPassword = ( email, password ) => {
   return ( dispatch ) => {
     setTimeout( () => {
